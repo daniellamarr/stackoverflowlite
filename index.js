@@ -1,5 +1,12 @@
+import Joi from 'joi';
 import express from 'express';
+import Route from './mvc/routes/route';
+import bodyParser from 'body-parser';
 const app = express();
+
+app.use(bodyParser.json());
+
+Route(app);
 
 
 // PORT
