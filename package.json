@@ -1,0 +1,40 @@
+{
+  "name": "stackoverflowlite",
+  "version": "1.0.0",
+  "description": "api endpoints for stackoverflowlite",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./index.js --exec babel-node --preset-es2015",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daniellamarr/stackoverflowlite.git"
+  },
+  "keywords": [
+    "Andela",
+    "Stackoverflowlite",
+    "api",
+    "challenge",
+    "developer"
+  ],
+  "author": "Daniel Lamarr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daniellamarr/stackoverflowlite/issues"
+  },
+  "homepage": "https://github.com/daniellamarr/stackoverflowlite#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0"
+  }
+}
