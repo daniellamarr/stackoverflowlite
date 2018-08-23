@@ -6,8 +6,9 @@
   "scripts": {
     "start": "babel-node ./index.js --exec babel-node --preset-es2015",
     "test": "mocha --require babel-core/register",
-    "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
-    "coverage": "node node_modules/.bin/istanbul cover _mocha -- -R spec"
+    "cover": "istanbul cover _mocha",
+    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
   },
   "repository": {
     "type": "git",
