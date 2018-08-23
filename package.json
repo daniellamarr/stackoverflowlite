@@ -8,7 +8,11 @@
     "test": "mocha --require babel-core/register",
     "cover": "istanbul cover _mocha",
     "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
-    "coverage": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./test/*"
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "nyc": {
+    "sourceMap": false,
+    "instrument": false
   },
   "repository": {
     "type": "git",
@@ -37,6 +41,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-plugin-istanbul": "^4.1.6",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
@@ -46,6 +51,7 @@
     "eslint-plugin-import": "^2.14.0",
     "istanbul": "^1.0.0-alpha.2",
     "mocha": "^5.2.0",
-    "mocha-lcov-reporter": "^1.3.0"
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^12.0.2"
   }
 }
